@@ -1,0 +1,9 @@
+{
+  "name": "the_push",
+  "version": "1.0.0",
+  "description": "Sample node.js socket.io web game",
+  "main": "index.js",
+  "repository": "https://github.com/jaegerpicker/the-push",
+  "author": "(Shawn Campbell <jaegerpicker@gmail.com>)",
+  "license": "MIT"
+}
