@@ -60,3 +60,8 @@ client.on('close', function() {
 * requires an active alive connection between client and server
 * typically allows broadcasts to all or some subset of clients connected
 * responds to Server generated events or Client Events
+
+---
+
+# Browser Notifications
+* 
