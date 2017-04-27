@@ -44,9 +44,9 @@ client.on('close', function() {
 
 +++
 
-- Websockets: <!-- .element: class="fragment" --> From Wiki: WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C. <!-- .element: class="fragment" --> It's a reimplementation of TCP/IP sockets over a subset of the HTTP protocol. 
-- Browser Notifications: <!-- .element: class="fragment" --> Notifications that display rather the browser has focus or not. Appear very like notifications from desktop applications.
-- Push Notifications: <!-- .element: class="fragment" --> Notifications that are sent from a server to a client that is subscribed to a notification service.
+- Websockets: <!-- .element: class="fragment" --> <small>From Wiki: WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C. <!-- .element: class="fragment" --> It's a reimplementation of TCP/IP sockets over a subset of the HTTP protocol. </small>
+- Browser Notifications: <!-- .element: class="fragment" --> <small>Notifications that display rather the browser has focus or not. Appear very like notifications from desktop applications.</small>
+- Push Notifications: <!-- .element: class="fragment" --> <small>Notifications that are sent from a server to a client that is subscribed to a notification service.</small>
 
 ---
 
