@@ -134,3 +134,67 @@ this.socket.on('disconnect', () => {
 
 These are pieces of async javascript, that is installed locally to the client and runs in the background. Think of it like a process in a native application. 
 
+--- 
+
+Example of a service Worker:
+```
+self.addEventListener('push', event => {
+  console.log('Received a push message', event);
+
+  let title = 'The Push!';
+  let body = 'Pushing data';
+  let icon = '/images/icon.png';
+  let tag = 'the-push-demo-sw';
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
+});
+```
+
+---
+
+How to register/install a service worker:
+```
+if ('serviceWorker' in navigator) {
+      console.log('Checking for service work support...');
+      navigator.serviceWorker.register('./service-worker.js').then(
+        registration => {
+          console.log('Service Worker registered!');
+        },
+        error => {
+          console.log('Service Worker registration failed!');
+        }
+      );
+    } else {
+      console.log('Service Worker not supported!');
+    }
+```
+
+---
+
+Two important callouts:
+* The service worker script location is relative to the script asking for permission to register
+* The registration process returns a promise and is async and none blocking, this is good because some users just ignore the prompt
+
+---
+
+# Let's look at some sample code!
+
+---
+
+### Recommended libraries
+
+* <a href="https://socket.io/">socket.io</a> - handles fall back and websockets, node and browser side
+* <a href="https://nickersoft.github.io/push.js/">push.js</a> - makes displaying browser notifications really easy
+* <a href="https://github.com/facebook/SocketRocket">Socket-Rocket</a> - iOS Native websocket library
+* <a href="https://github.com/web-push-libs/web-push">Web Push</a> - node library for sending browser based push notications 
+
+---
+
+Thanks to my employer <a href="http://www.vetsfirstchoice.com"> Vet's First Choice </a> for sponsing this meetup and my talk!
+
