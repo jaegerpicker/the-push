@@ -64,4 +64,23 @@ client.on('close', function() {
 ---
 
 # Browser Notifications
-* 
+* Are triggered by client side JS for display
+* require the page to be running locally on the client
+
+---
+
+# Push Notifications
+* Are triggered by server side code and sent from your server to the browser's push notification server
+* You can register your page via two different way's
+	- Google Cloud Notifications
+	- VAPID Number - I'll so this as it's the open standard not tied to any one vendor
+* When your page loads it needs to request access to send Notifications
+* When you register you install a service worker that runs in the background
+* This service worker can display notifications even if your page isn't currently loaded in the browser
+* Work similar to Mobile notifications though aren't as reliable
+
+---
+
+# Service Workers
+
+These are pieces of async javascript, that is installed locally to the client and runs in the background. Think of it like a process in a native application. 
