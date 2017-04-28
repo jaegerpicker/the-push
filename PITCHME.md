@@ -63,6 +63,52 @@ client.on('close', function() {
 
 ---
 
+# Long Polling
+
+The process of requesting new data for an end point with a very long time out. The poll waits on new data to arrive and returns as soon as it does or it times out. The first technique used for server driven
+interaction with the user. Has the advantage of working through firewalls and corporate proxy servers so it's still a popular choice today.
+
+---
+
+# Socket.io
+
+An open source JS lib for handling websockets or falling back to long polling automattically if web sockets aren't supported. 
+Example Server Socket.io code:
+
+---
+
+```
+import express from 'express';
+import http from 'http';
+import SocketIO from 'socket.io';
+
+let app = express();
+let server = http.Server(app);
+let io = new SocketIO(server);
+
+io.on('connection', socket => {
+	console.log(socket);
+	socket.on('disconnect', (socket) => {
+		console.log('disconnected: ' + socket)
+	});
+});
+``` 
+
+---
+
+Exampl Client Socket.io Code:
+
+```
+import io from 'socket.io-client';
+this.socket = io();
+
+this.socket.on('disconnect', () => {
+     this.socket.close();
+});
+```
+
+---
+
 # Browser Notifications
 * Are triggered by client side JS for display
 * require the page to be running locally on the client
@@ -75,7 +121,9 @@ client.on('close', function() {
 	- Google Cloud Notifications
 	- VAPID Number - I use this, the open standard
 * When your page loads it needs to request access to send Notifications
+
 +++
+
 * When you register you install a service worker that runs in the background
 * This service worker can display notifications even if your page isn't currently loaded in the browser
 * Work similar to Mobile notifications though aren't as reliable
@@ -85,3 +133,4 @@ client.on('close', function() {
 # Service Workers
 
 These are pieces of async javascript, that is installed locally to the client and runs in the background. Think of it like a process in a native application. 
+
