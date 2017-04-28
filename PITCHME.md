@@ -125,6 +125,7 @@ this.socket.on('disconnect', () => {
 +++
 
 * When you register you install a service worker that runs in the background
+* create a manifest.json at the root of the web application's directory
 * This service worker can display notifications even if your page isn't currently loaded in the browser
 * Work similar to Mobile notifications though aren't as reliable
 
@@ -180,6 +181,23 @@ if ('serviceWorker' in navigator) {
 Two important callouts:
 * The service worker script location is relative to the script asking for permission to register
 * The registration process returns a promise and is async and none blocking, this is good because some users just ignore the prompt
+
+---
+
+# Manifest.json example
+
+```
+{
+  "name": "The Push Demo",
+  "short_name": "the-push",
+  "start_url": "/",
+  "icons": [{
+    "src": "/images/icon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}
+```
 
 ---
 
