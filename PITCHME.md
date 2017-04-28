@@ -17,11 +17,11 @@
 +++
 
 ##### First definitions:
-- HTTP: <!-- .element: class="fragment" --> <small>From Wiki: The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, and hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web. <!-- .element: class="fragment" --> Typically implemented as a request event driven stateless protocol. In otherwords there is no ablity to push to the client.</small>
+- HTTP: <!-- .element: class="fragment" --> <small>From Wiki: 'The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, and hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web. '<!-- .element: class="fragment" --> Typically implemented as a request event driven stateless protocol. In otherwords there is no ablity to push to the client.</small>
 +++
 - TCP/IP: <!-- .element: class="fragment" --> <small>The underlying framework that HTTP is built on. Implemented using sockets.</small>
 +++
-- Sockets: <!-- .element: class="fragment" --> <small>From Wiki: A TCP socket is an endpoint instance defined by an IP address and a port in the context of either a particular TCP connection or the listening state. A port is a virtualisation identifier defining a service endpoint (as distinct from a service instance endpoint aka session identifier). </small>Example node.js socket:
+- Sockets: <!-- .element: class="fragment" --> <small>From Wiki: 'A TCP socket is an endpoint instance defined by an IP address and a port in the context of either a particular TCP connection or the listening state. A port is a virtualisation identifier defining a service endpoint (as distinct from a service instance endpoint aka session identifier).' </small>Example node.js socket:
 
 +++
 
@@ -46,7 +46,7 @@ client.on('close', function() {
 
 +++
 
-- Websockets: <!-- .element: class="fragment" --> <small>From Wiki: WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C. <!-- .element: class="fragment" --> It's a reimplementation of TCP/IP sockets over a subset of the HTTP protocol. </small>
+- Websockets: <!-- .element: class="fragment" --> <small>From Wiki: 'WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C.' <!-- .element: class="fragment" --> It's a reimplementation of TCP/IP sockets over a subset of the HTTP protocol. </small>
 +++
 - Browser Notifications: <!-- .element: class="fragment" --> <small>Notifications that display rather the browser has focus or not. Appear very like notifications from desktop applications.</small>
 +++
